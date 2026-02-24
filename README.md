@@ -28,10 +28,19 @@ Implementation of the **Bisection** and **Golden Section** methods to find the m
 
 ---
 
-## 📂 Repository Structure (Deliverable 1)
-* 📂 **`Deliverable_1/`**: 
-    * 📄 `Main_Bisection.m` & `Main_GoldenSection.m`: Primary execution scripts.
-    * 📂 `utils/`: Core optimization algorithms and objective function definitions.
+## 📂 Repository Structure
+
+The project is organized into folders per deliverable and sub-folders per objective function for clarity:
+
+* 📂 **`Deliverable_1/`**:
+    * 📂 `f1_Analysis/`: Scripts and function definitions for $f_1(x)$.
+    * 📂 `f2_Analysis/`: Scripts and function definitions for $f_2(x)$.
+    * 📂 `f3_Analysis/`: Scripts and function definitions for $f_3(x)$.
+    * 📄 `Deliverable_1_Report.pdf`: Comprehensive technical report.
+* 📂 **`Plots/`**: Selected visualizations for the README highlights.
+
+---
+*Developed as part of the Optimization Techniques course, ECE AUTh.*
 
 ---
 *Developed as part of the Optimization Techniques course, ECE AUTh.*
