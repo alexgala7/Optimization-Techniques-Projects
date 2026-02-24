@@ -121,8 +121,13 @@ This configuration satisfies the stability criterion $\gamma_k \cdot s_k < 0.33$
 * **Result:** The algorithm converges smoothly to (0,0) in 448 iterations without any oscillations. 
 * **Observation:** Even starting from more remote initial points, the proper selection of steps ensures a steady downward trajectory for $f(x)$.
 
-![Projected Gradient Convergence](Plots/projected_gradient_analysis.png)
-*Figure: Comparison of convergence paths. Note how small step products eliminate the "ping-pong" effect of the projection.*
+#### Convergence vs. Oscillation Analysis
+The product $\gamma_k \cdot s_k$ determines the stability of the projection. High values lead to cyclical oscillations, while stable values ensure smooth convergence.
+
+| Unstable Strategy ($\gamma \cdot s = 2.5$) | Stable Strategy ($\gamma \cdot s = 0.02$) |
+| :---: | :---: |
+| ![Oscillation](Plots/oscillation_analysis.png) | ![Convergence](Plots/projected_gradient_convergence.png) |
+| *Result: Permanent oscillation between values.* | *Result: Smooth convergence to global minimum.* |
 
 | Scenario | $\gamma_k$ | $s_k$ | $\gamma_k \cdot s_k$ | Result |
 | :--- | :---: | :---: | :---: | :--- |
