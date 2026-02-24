@@ -127,9 +127,9 @@ This configuration satisfies the stability criterion $\gamma_k \cdot s_k < 0.33$
 
 | Scenario | $\gamma_k$ | $s_k$ | $\gamma_k \cdot s_k$ | Result |
 | :--- | :---: | :---: | :---: | :--- |
-| **Theme 2** | 0.5 | 5 | 2.5 | ❌ Oscillation |
-| **Theme 3** | 0.1 | 15 | 1.5 | ⚠️ Numerical Convergence |
-| **Theme 4** | 0.2 | 0.1 | 0.02 | ✅ Smooth Convergence |
+| **Scenario 2** | 0.5 | 5 | 2.5 | ❌ Oscillation |
+| **Scenario 3** | 0.1 | 15 | 1.5 | ⚠️ Numerical Convergence |
+| **Scenario 4** | 0.2 | 0.1 | 0.02 | ✅ Smooth Convergence |
 
 ---
 
