@@ -146,4 +146,4 @@ The product $\gamma_k \cdot s_k$ determines the stability of the projection. Hig
     * 📄 `Deliverable_3_Report.pdf`: Detailed mathematical proofs and oscillation analysis.
 
 ---
-*Project developed as part of the Optimization Techniques course, ECE AUTh, 2026.*
+*Project developed as part of the Optimization Techniques course, ECE AUTh, 2024.*
