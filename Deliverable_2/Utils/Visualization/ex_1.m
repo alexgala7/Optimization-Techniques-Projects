@@ -1,1 +1,11 @@
-
+x = -5:0.1:5;
+y = -5:0.1:5;
+[X, Y] = meshgrid(x, y);
+Z = (X.^5) .* exp(-X.^2 - Y.^2);
+figure;
+surf(X, Y, Z);
+xlabel('x');
+ylabel('y');
+zlabel('f(x, y)');
+title('f(x, y) = x^5 e^{-x^2 - y^2}');
+colorbar;
