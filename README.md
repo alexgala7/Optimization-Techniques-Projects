@@ -37,6 +37,7 @@ The project is organized into folders per deliverable and sub-folders per object
     * 📂 `f2_Analysis/`: Scripts and function definitions for $f_2(x)$.
     * 📂 `f3_Analysis/`: Scripts and function definitions for $f_3(x)$.
     * 📄 `Deliverable_1_Report.pdf`: Comprehensive technical report.
+    * 📄 `Deliverable_1_Assignment.pdf`: The assignment of the first deliverable.
 * 📂 **`Plots/`**: Selected visualizations for the README highlights.
 
 ---
