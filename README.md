@@ -13,13 +13,13 @@ Implementation of the **Bisection** and **Golden Section** methods to find the m
 * **Efficiency:** For $l=0.01$ and $\epsilon=0.001$, it converges in 10 iterations with **18 function evaluations**.
 * **Sensitivity:** Large $\epsilon$ values lead to numerical oscillations as shown in the analysis.
 
-![Bisection Analysis](Deliverable_1/Plots/bisection_f1_sensitivity.png)
+![Bisection Analysis](Plots/bisection_f1_sensitivity.png)
 
 #### 2. Golden Section Search
 * **Computational Cost:** Requires 14 iterations for $l=0.01$ but only **15 function evaluations**, making it ideal for "expensive" functions.
 * **Behavior:** Shows a consistent "step-like" reduction of the uncertainty interval.
 
-![Golden Section Convergence](Deliverable_1/Plots/golden_section_f1_convergence.png)
+![Golden Section Convergence](Plots/golden_section_f1_convergence.png)
 
 | Method | Accuracy ($l$) | Iterations ($k$) | Function Evaluations |
 | :--- | :---: | :---: | :---: |
@@ -47,7 +47,7 @@ This deliverable explores second-order and gradient-based optimization methods, 
 ### 📉 Objective Function Overview
 A 3D surface analysis of the objective function revealed a global minimum at $\approx -0.8106$ and a stationary saddle point at $(0, 0)$.
 
-![3D Surface Analysis](Deliverable_2/Plots/function_3d_surface.png)
+![3D Surface Analysis](Plots/function_3d_surface.png)
 
 
 ### 🚀 Comparison of Methods & Strategies
@@ -69,7 +69,7 @@ The performance was evaluated using three primary starting points:
 * **Optimization:** The most robust method. By ensuring a positive definite Hessian ($\nabla^2 f + \mu I$), it successfully navigated to the global minimum.
 * **Peak Efficiency:** Combined with the **Armijo Rule**, L-M achieved convergence in just **6 iterations**.
 
-![Method Comparison Convergence](Deliverable_2/Plots/convergence_comparison.png)
+![Method Comparison Convergence](Plots/convergence_comparison.png)
 
 
 ### 📊 Comparative Performance Summary (Point ii)
