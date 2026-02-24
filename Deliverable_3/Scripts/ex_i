@@ -1,0 +1,31 @@
+e = 0.01;
+nn = 100000;
+gamma = 0.5;
+s = 5;
+
+X1 = NaN * ones(nn, 1);
+X2 = NaN * ones(nn, 1);
+F = NaN * ones(nn, 1);
+D = NaN * ones(nn, 2);
+
+X1(1, 1) = 5;
+X2(1, 1) = -5;
+F(1, 1) = f(X1(1, 1), X2(1, 1));
+
+for i = 1:nn
+    if norm(compute_gradient(X1(i, 1), X2(i, 1))) < e
+        break;
+    else
+        X1(i+1, 1) = X1(i, 1) + gamma * (projection_x1(X1(i, 1), X2(i, 1), s) - X1(i, 1));
+        X2(i+1, 1) = X2(i, 1) + gamma * (projection_x2(X1(i, 1), X2(i, 1), s) - X2(i, 1));
+        F(i+1, 1) = f(X1(i+1, 1), X2(i+1, 1));
+    end
+end
+
+final_iterations = i - 1;
+final_minimum = F(i, 1);
+
+fprintf(['Το ολικό ελάχιστο της συνάρτησης f χρησιμοποιώντας τη μέθοδο\n' ...
+    'Μέγιστης Καθόδου, με σταθερό βήμα %.2f και σημείο εκκίνησης του\n' ...
+    'αλγορίθμου το (%.2f, %.2f) είναι το %.4f και βρέθηκε σε %d επαναλήψεις.\n'], ...
+    gamma, X1(1,1), X2(1,1), final_minimum, final_iterations);
