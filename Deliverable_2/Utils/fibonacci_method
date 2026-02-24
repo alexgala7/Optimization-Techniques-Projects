@@ -1,0 +1,35 @@
+function gamma = fibonacci_method(func, x0, d, a, b, epsilon)
+    F = [1, 1];
+    while F(end) < (b - a) / epsilon
+        F(end+1) = F(end) + F(end-1);
+    end
+    n = length(F);
+
+    x1k = a + F(n-2) / F(n) * (b - a);
+    x2k = a + F(n-1) / F(n) * (b - a);
+    
+    f1 = func(x0(1) + x1k * d(1), x0(2) + x1k * d(2));
+    f2 = func(x0(1) + x2k * d(1), x0(2) + x2k * d(2));
+    
+    for k = 1:n-2
+        if n-k-2 <= 0 || n-k-1 <= 0 || n-k <= 0
+            break;
+        end
+
+        if f1 > f2
+            a = x1k;
+            x1k = x2k;
+            x2k = a + F(n-k-1) / F(n-k) * (b - a);
+            f1 = f2;
+            f2 = func(x0(1) + x2k * d(1), x0(2) + x2k * d(2));
+        else
+            b = x2k;
+            x2k = x1k;
+            x1k = a + F(n-k-2) / F(n-k) * (b - a);
+            f2 = f1;
+            f1 = func(x0(1) + x1k * d(1), x0(2) + x1k * d(2));
+        end
+    end
+    
+    gamma = (a + b) / 2;
+end
