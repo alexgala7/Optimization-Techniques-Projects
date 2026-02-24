@@ -47,7 +47,7 @@ This deliverable explores second-order and gradient-based optimization methods, 
 ### 📉 Objective Function Overview
 A 3D surface analysis of the objective function revealed a global minimum at $\approx -0.8106$ and a stationary saddle point at $(0, 0)$.
 
-![3D Surface Analysis](Plots/function_3d_surface.png)
+![3D Surface Analysis](Deliverable_2/Plots/function_3d_surface.png)
 
 
 ### 🚀 Comparison of Methods & Strategies
@@ -69,7 +69,7 @@ The performance was evaluated using three primary starting points:
 * **Optimization:** The most robust method. By ensuring a positive definite Hessian ($\nabla^2 f + \mu I$), it successfully navigated to the global minimum.
 * **Peak Efficiency:** Combined with the **Armijo Rule**, L-M achieved convergence in just **6 iterations**.
 
-![Method Comparison Convergence](Plots/convergence_comparison.png)
+![Method Comparison Convergence](Deliverable_2/Plots/convergence_comparison.png)
 
 
 ### 📊 Comparative Performance Summary (Point ii)
@@ -83,13 +83,14 @@ The performance was evaluated using three primary starting points:
 
 ## 📂 Repository Structure (Deliverable 2)
 
-To maintain organization, the code is structured by method:
+The implementation is modularized into sub-folders based on the optimization strategy:
 
 * 📂 **`Deliverable_2/`**:
-    * 📂 `Visualization/`: `Ex_1.m` (3D Plotting).
-    * 📂 `Steepest_Descent/`: Scripts `Ex_2_a,b,c` and line search routines.
-    * 📂 `Newton_L_M/`: Newton and Levenberg-Marquardt implementations.
-    * 📂 `Utils/`: `fibonacci_method.m`, `find_gamma_armijo.m`.
-    * 📄 `Deliverable_2_Report.pdf`: Detailed analysis of Hessian eigenvalues and criteria.
-
+    * 📂 `Steepest_Descent/`: Gradient-based implementations (Constant, Optimal, Armijo).
+    * 📂 `Newton_Method/`: Second-order implementations and stability analysis.
+    * 📂 `Levenberg_Marquardt/`: Robust hybrid optimization scripts.
+    * 📂 `Utils/`: Reusable line search routines (Armijo, Fibonacci, Bisection).
+    * 📂 `Visualization/`: 3D surface plotting of the objective function.
+    * 📄 `Deliverable_2_Report.pdf`: Comprehensive technical analysis.
+    * 📄 `Deliverable_2_Assignment.pdf`: The objectives of this deliverable.
 ---
