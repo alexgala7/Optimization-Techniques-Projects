@@ -139,11 +139,18 @@ The product $\gamma_k \cdot s_k$ determines the stability of the projection. Hig
 
 ## 📂 Repository Structure (Deliverable 3)
 
-* 📂 **`Deliverable_3/`**: 
-    * 📄 `Ex_1.m`: Unconstrained gradient descent study.
-    * 📄 `Ex_2_3_4.m`: Comparative study of Projected Gradient Descent.
-    * 📄 `Ex_i.m`: Individual test script for parameter exploration.
-    * 📄 `Deliverable_3_Report.pdf`: Detailed mathematical proofs and oscillation analysis.
+The implementation is split into execution scripts and modular utility functions:
 
+* 📂 **`Deliverable_3/`**:
+    * 📂 `Scripts/`:
+        * 📄 `Ex_1.m`: Unconstrained gradient descent analysis.
+        * 📄 `Ex_2_3_4.m`: Main simulation for Themes 2, 3, and 4 (Projected Gradient).
+        * 📄 `Ex_i.m`: Explorer script for testing individual parameters and initial points.
+    * 📂 `Utils/`:
+        * 📄 `f.m`: Objective function definition.
+        * 📄 `partial_x1.m` & `partial_x2.m`: Partial derivative calculations.
+        * 📄 `projection_x1.m` & `projection_x2.m`: Box constraint projection logic.
+    * 📄 `Deliverable_3_Report.pdf`: Mathematical proofs and oscillation theory.
+    * 📄 `Deliverable_3_Assignment.pdf`: The objectives of the deliverable.
 ---
 *Project developed as part of the Optimization Techniques course, ECE AUTh, 2024.*
